@@ -11,19 +11,22 @@ def new_Form(request):
         if form_data.is_valid():
             #print(form_data.cleaned_data)# this displays all the data
             #print(form_data.cleaned_data['name'])# this displays the paricular data
-            name=form_data.cleaned_data['name']
-            email=form_data.cleaned_data['email']
-            url=form_data.cleaned_data['url']
-            number=form_data.cleaned_data['number']
-            date=form_data.cleaned_data['date']
-            datetime=form_data.cleaned_data['datetime']
-            time=form_data.cleaned_data['time']
-            password=form_data.cleaned_data['password']
+            #name=form_data.cleaned_data['name']
+            #email=form_data.cleaned_data['email']
+            #url=form_data.cleaned_data['url']
+            #number=form_data.cleaned_data['number']
+            #date=form_data.cleaned_data['date']
+            #datetime=form_data.cleaned_data['datetime']
+            #time=form_data.cleaned_data['time']
+            #password=form_data.cleaned_data['password']
             
-            address=form_data.cleaned_data['address']
+            #address=form_data.cleaned_data['address']
             
             gender=form_data.cleaned_data['gender']
-            d={'name':name,'email':email,'url':url,'number':number}
+            gender1=form_data.cleaned_data['gender1']
+            courses=form_data.cleaned_data['courses']
+            #d={'name':name,'email':email,'url':url,'number':number}
+            d={'gender':gender,'gender1':gender1,'courses':courses}
             return render(request,'form_data.html',context=d)
     return render(request,'New_Form.html',context={'form':form})
 
